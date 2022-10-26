@@ -1,0 +1,35 @@
+<h2 class="mat-title">Profile</h2>
+<mat-card class="cards">
+  <mat-card-header class="header-card">
+    <mat-card-title *ngIf="isTeacher===true" class="title-profile">Hello Teacher</mat-card-title>
+    <mat-card-title *ngIf="isTeacher ===false" class="title-profile">Hello Director</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="profile-detail-row">
+    <div class="title-profile">
+      <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/man-teacher_1f468-200d-1f3eb.png" alt="profile">
+    </div>
+    <div class="profile-detail">
+      <h2>Personal Information</h2>
+      <div>
+        Name: {{user.first_name}}<br>
+        Last Name: {{user.last_name}}<br>
+        Age: {{user.age}}<br>
+        Phone: {{user.phone}}<br>
+        Email: {{user.email}}<br>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<h2 *ngIf="isTeacher" class="mat-title">Points</h2>
+<mat-card *ngIf="isTeacher" class="points-card cards">
+  <div class="points-card">
+    <mat-icon class="content">check_circle</mat-icon>
+    <div>
+      <p class="content">Your</p>
+      <p class="content">Points earned</p>
+    </div>
+  </div>
+  <div class="points-button">
+    <button mat-stroked-button color="warn">{{user.point}}</button>
+  </div>
+</mat-card>

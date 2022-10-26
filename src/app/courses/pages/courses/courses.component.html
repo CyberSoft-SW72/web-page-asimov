@@ -1,0 +1,17 @@
+<h2 class="mat-display-1">Courses <mat-icon>bookmark</mat-icon></h2>
+<div class="course-content">
+  <div *ngFor="let course of courses">
+    <mat-card class="course-card">
+      <mat-card-header class="header-card">
+        <mat-card-title class="course-title">Course</mat-card-title>
+        <mat-card-subtitle style="color: white">{{course.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content mat-card-content class="card-content">
+        <p>{{course.description}}</p>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <button mat-button content="center" color="primary" routerLink="/main/courses/{{course.id}}">see more</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

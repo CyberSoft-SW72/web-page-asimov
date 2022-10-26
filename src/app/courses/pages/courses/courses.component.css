@@ -1,0 +1,36 @@
+.course-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.course-card {
+  width: 320px;
+  max-height: 300px;
+  margin: 10px;
+}
+
+.course-card:hover {
+  box-shadow: 0 0 15px #333;
+}
+
+.course-title {
+  color: white;
+  margin-top: 10px;
+}
+
+.header-card {
+  background-color: #3f51b5;
+  border-radius: inherit;
+  justify-content: center;
+}
+
+.card-content {
+  margin: 10px;
+}
+
+.card-actions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

@@ -1,0 +1,72 @@
+<div class="component">
+  <!--Teacher Details-->
+  <div class="teacher-supp-container">
+    <div class="teacher-info">
+      <mat-toolbar >
+        <span class="title-toolbar">Teacher Details</span>
+      </mat-toolbar>
+      <div>
+        <mat-toolbar class="title-card" color="primary"> {{teacher.first_name}} {{teacher.last_name}}</mat-toolbar>
+        <mat-card>
+          <mat-card-content>
+            <p><b>Personal Information:</b></p>
+            <p><b>- Name(s):</b> {{teacher.first_name}}</p>
+            <p><b>- Last name:</b> {{teacher.last_name}}</p>
+            <p><b>- Age:</b> {{teacher.age}}</p>
+            <p><b>- Email:</b> {{teacher.email}}</p>
+            <p><b>- Phone:</b> {{teacher.phone}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <mat-toolbar >
+        <span class="title-toolbar">Teacher Progress</span>
+      </mat-toolbar>
+      <mat-card class="progress-bar-content">
+        <span class="number-bar">{{percentProgress}}%</span>
+        <mat-progress-bar class="progress-bar-material" mode="determinate" value="{{percentProgress}}"></mat-progress-bar>
+      </mat-card>
+    </div>
+  </div>
+  <!--Point for progress-->
+  <mat-toolbar>
+    <span class="title-toolbar">Point for progress</span>
+  </mat-toolbar>
+  <mat-card class="point-progress">
+    <div class="point-description">
+      <mat-icon>check</mat-icon>
+      <div>
+        <mat-card-subtitle>This teacher</mat-card-subtitle>
+        <mat-card-title>Points earned</mat-card-title>
+      </div>
+    </div>
+    <mat-chip-list class="point-chip">
+      <mat-chip color="primary" selected>
+        {{teacher.point}} points
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card>
+  <!--Courses in progress and completed-->
+  <mat-toolbar>
+    <span class="title-toolbar">Courses in progress and completed</span>
+  </mat-toolbar>
+  <div class="courses-card-container">
+    <div *ngFor="let item of courses" class="courses-card">
+      <mat-toolbar class="title-card" color="primary"> {{item.name}}</mat-toolbar>
+      <mat-card>
+        <div class="courses-card-content">
+          <div class="courses-card-icon">
+            <mat-icon>description</mat-icon>
+          </div>
+          <div class="courses-card-description">
+            <span>{{ item.description }}</span>
+          </div>
+        </div>
+        <mat-chip-list class="courses-state-card-chip">
+          <mat-chip color="warn" selected>INCOMPLETE</mat-chip>
+        </mat-chip-list>
+      </mat-card>
+    </div>
+  </div>
+</div>

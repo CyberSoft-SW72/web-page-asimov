@@ -1,0 +1,65 @@
+<div class="course">
+  <div class="left">
+    <h1 class="title">Course Information</h1>
+    <div class="information">
+      <div class="info-card">
+        <div class="info-card__top">
+          <h2>
+            {{course.name}}
+          </h2>
+        </div>
+        <div class="info-card__content">
+          <h3>
+            Description:
+          </h3>
+          <p>
+            {{course.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="vertical-space"></div>
+
+    <div class="items">
+      <h1 class="title">Course Items</h1>
+      <div class="card item-card" *ngFor="let item of items;">
+          <span>Tag</span>
+          <div class="item-card__content">
+            <div class="item-card__left">
+              <h3>
+                {{item.name}}
+              </h3>
+              <p>
+                {{item.description}}
+              </p>
+            </div>
+            <div class="item-card__right" mat-dialog-content>
+              <div>
+                <button mat-button (click)="openDialog(item)">Details</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="progress">
+      <h1 class="title">Course Progress</h1>
+      <div class="card">
+        <h1 class="progress-card__title">{{ percent }}%</h1>
+        <mat-progress-bar class="progress-bar" mode="buffer" [value]="percent"></mat-progress-bar>
+      </div>
+    </div>
+
+    <div class="vertical-space"></div>
+
+    <div class="competences">
+      <h1 class="title">Competences Includes</h1>
+      <div class="card group__tags">
+        <span class="tags" *ngFor="let item of competences">{{item.title}}</span>
+      </div>
+    </div>
+  </div>
+</div>

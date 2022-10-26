@@ -1,0 +1,28 @@
+/*header*/
+.title-toolbar {
+  justify-content: space-evenly;
+}
+.title-toolbar span {
+  font-weight: bold;
+  font-size: 150%;
+}
+/*body*/
+.courses-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.courses-card {
+  margin: 15px 0;
+  max-width: 360px;
+  padding: 10px;
+}
+.title-card {
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+}
+.courses-card-description {
+  display: flex;
+  width: 85%;
+}

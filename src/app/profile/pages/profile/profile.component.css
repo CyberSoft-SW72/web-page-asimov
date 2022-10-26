@@ -1,0 +1,49 @@
+mat-card {
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.cards {
+  box-shadow: 0 0 3px #333;
+}
+
+.header-card {
+  background-color: #3f51b5;
+  border-radius: inherit;
+  justify-content: left;
+}
+
+.title-profile {
+  color: white;
+  margin: 15px;
+}
+
+.profile-detail-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-detail {
+  margin: 15px;
+}
+
+.points-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content {
+  margin: 15px;
+}
+
+@media (max-width: 768px) {
+  .profile-detail-row {
+    flex-direction: column;
+  }
+  .points-card {
+    flex-direction: column;
+  }
+}

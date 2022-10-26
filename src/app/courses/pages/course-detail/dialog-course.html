@@ -1,0 +1,15 @@
+<h1 mat-dialog-title> {{data.name}} </h1>
+
+<mat-dialog-content>
+  <iframe *ngIf="data.name === 'Video'; else doc" width="560" height="315" [src]='getVideoIframe(data.description)'
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+  <ng-template #doc>
+    {{data.description}}
+  </ng-template>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Completed</button>
+</mat-dialog-actions>

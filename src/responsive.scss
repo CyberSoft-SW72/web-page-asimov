@@ -1,0 +1,18 @@
+$breakpoints: (
+  phone-xs: 320px,
+  phone-s: 360px,
+  phone-m: 375px,
+  phone-390: 390px,
+  phone-576: 576px,
+  phone: 768px,
+  tablet-s: 992px,
+  tablet: 1024px,
+  desktop-s: 1200px,
+  desktop-m: 1366px,
+  desktop: 1440px,
+  desktop-l: 1600px,
+  desktop-xl: 1920px,
+  desktop-4k: 2560px,
+) !default;
+
+@import "~include-media/dist/_include-media";

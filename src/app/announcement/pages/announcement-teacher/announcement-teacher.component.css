@@ -1,0 +1,40 @@
+.toolbar-title{
+  background-color:ghostwhite;
+}
+
+.button-sub{
+  margin-left: 7px;
+  margin-top: 4px;
+}
+
+.title-input{
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: white;
+}
+
+.title-input2{
+  margin: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.announcement-complete{
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.icon{
+  color: grey;
+}
+
+.title-examples{
+  width: 100%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

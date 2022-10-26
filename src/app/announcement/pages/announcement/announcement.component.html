@@ -1,0 +1,53 @@
+<p>
+  <mat-toolbar class="toolbar-title">
+    <span class="title">Announcement for teachers</span>
+  </mat-toolbar>
+</p>
+
+<form [formGroup]="addAnnouncementForm">
+  <mat-card class="mat-elevation-z4 title-input">
+    <mat-card-title>New Announcement</mat-card-title>
+    <mat-card-content>
+      <div class="align-form">
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" class="title-input2" type="text" autocomplete="off">
+          <mat-error *ngIf="title?.errors?.['required']">title is <strong>required</strong></mat-error>
+          <mat-error *ngIf="title?.errors?.['maxlength'] && !title?.errors?.['required']">title must have 60 characters or less</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" class="title-input2" autocomplete="off">
+          <mat-error *ngIf="description?.errors?.['required']">description is <strong>required</strong></mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <div class="button-form">
+      <button mat-button color="primary" [disabled]="!this.addAnnouncementForm.valid" *ngIf="!isUpdated" (click)="createAnnouncement()">Add</button>
+      <button mat-button color="primary" *ngIf="isUpdated" (click)="updateAnnouncement()">Update</button>
+      <button mat-button color="primary" *ngIf="isUpdated" (click)="cancel()">Cancel</button>
+      <button mat-button color="primary" (click)="resetForm()">Reset</button>
+    </div>
+  </mat-card>
+</form>
+
+<p>
+  <mat-toolbar class="toolbar-title">
+    <span class="title">Announcements confirmed</span>
+  </mat-toolbar>
+</p>
+
+<mat-card class="announcement-complete" *ngFor="let item of announcement">
+  <mat-toolbar style="background: white">
+    <span class="title-examples"><mat-icon class="icon">people</mat-icon> {{item.title}} </span>
+  </mat-toolbar>
+  <div style="display:flex; justify-content:space-between; align-items: center">
+    <span class="title-examples" style="margin-left: 20px"> {{item.description}}</span>
+    <button mat-fab color="primary" mat-mini-fab (click)="getAnnouncementEdited(item)" [disabled]="isUpdated">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-fab color="primary" mat-mini-fab (click)="deleteAnnouncement(item.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-card>

@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+  <span><mat-icon>school</mat-icon> Asimov</span>
+  <span class="default-spacer"></span>
+  <button mat-button [routerLink]="'/main/profile'">Profile <mat-icon>account_circle</mat-icon></button>
+  <button mat-button [routerLink]="'/sign-in'">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav-content" opened="false" mode="push">
+    <div *ngIf="isTeacher === false">
+      <mat-nav-list>
+        <span class="side-title">Sidenav Director</span>
+        <mat-divider></mat-divider>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/dashboard'" class="source-name"><mat-icon class="icon">dashboard</mat-icon>Dashboard</a>
+        </mat-list-item>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/announcements'" class="source-name"><mat-icon class="icon">announcement</mat-icon>Announcements</a>
+        </mat-list-item>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/teachers'" class="source-name"><mat-icon class="icon">perm_identity</mat-icon>Teachers</a>
+        </mat-list-item>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/top-teachers'" class="source-name"><mat-icon class="icon">supervisor_account</mat-icon>Top Teachers</a>
+        </mat-list-item>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/competences'" class="source-name"><mat-icon class="icon">assessment</mat-icon>Competences</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div *ngIf="isTeacher === true">
+      <mat-nav-list>
+        <span class="side-title">Sidenav Teacher</span>
+        <hr/>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/dashboard'" class="source-name"><mat-icon class="icon">dashboard</mat-icon>Dashboard</a>
+        </mat-list-item>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/courses'" class="source-name"><mat-icon class="icon">book</mat-icon>Courses</a>
+        </mat-list-item>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/competences'" class="source-name"><mat-icon class="icon">assessment</mat-icon>Competences</a>
+        </mat-list-item>
+        <mat-list-item class="list-item" (click)="sidenav.close()">
+          <a mat-button [routerLink]="'/main/announcementsTeacher'" class="source-name"><mat-icon class="icon">announcement</mat-icon>Announcements</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="sidenav">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,15 @@
+@use "sass:math";
+@import "responsive.scss";
+$base-font-size: 14;
+
+@function rem($size) {
+  @return #{math.div($size, $base-font-size)}rem;
+}
+
+@mixin size($size, $height: 0) {
+  font-size: rem($size);
+
+  @if $height>0 {
+    line-height: #{math.div($height, $size)}em;
+  }
+}

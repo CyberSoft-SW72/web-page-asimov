@@ -1,0 +1,13 @@
+<mat-toolbar class="title-toolbar">
+  <span>Competences</span>
+</mat-toolbar>
+<div class="courses-card-container">
+  <div *ngFor="let item of competences" class="courses-card">
+    <mat-toolbar class="title-card" color="primary"> {{item.title}}</mat-toolbar>
+    <mat-card>
+      <div class="courses-card-description">
+        <span>{{ item.description }}</span>
+      </div>
+    </mat-card>
+  </div>
+</div>

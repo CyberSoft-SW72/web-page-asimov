@@ -1,0 +1,67 @@
+.columns-dashboard {
+  display: flex;
+  flex-direction: row;
+}
+
+mat-card {
+  margin: 20px;
+  max-width: 700px;
+}
+
+.shade-card {
+  box-shadow: 0 0 5px #333;
+}
+
+img {
+  border-radius: 5px;
+}
+
+mat-card-title-group {
+  margin: 50px;
+
+}
+
+mat-card-title {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+mat-card-subtitle {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-progress-bar {
+  width: 700px;
+}
+
+.columns-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.progress {
+  height: 40px;
+  border-radius: 20px;
+}
+
+@media (max-width: 1000px) {
+  .columns-dashboard {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1500px) {
+  mat-card-title-group {
+    display: flex;
+    flex-direction: column;
+  }
+  mat-progress-bar {
+    width: 400px;
+  }
+}

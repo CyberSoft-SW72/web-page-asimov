@@ -1,0 +1,20 @@
+<div class="teacher-content">
+  <div *ngFor="let teacher of teachers">
+    <mat-card class="teacher-card">
+      <mat-card-header class="header-card">
+        <mat-card-title class="teacher-title">{{teacher.first_name}}</mat-card-title>
+        <mat-card-subtitle style="color: white">{{teacher.last_name}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content mat-card-content class="card-content">
+        <p>email: {{teacher.email}}</p>
+        <p>age: {{teacher.age}}</p>
+        <p>phone: {{teacher.phone}}</p>
+        <p>points: {{teacher.point}}</p>
+        <p></p>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <button mat-raised-button content="center" color="primary" routerLink="/main/teachers/{{teacher.id}}">see more</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

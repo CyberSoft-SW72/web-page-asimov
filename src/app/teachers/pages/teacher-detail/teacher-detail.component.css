@@ -1,0 +1,96 @@
+/*Teacher Details*/
+.component {
+  overflow: hidden;
+}
+/*Teacher Details*/
+.teacher-supp-container {
+  display: flex;
+  margin: 10px 0;
+}
+.title-toolbar {
+  font-weight: bold;
+  font-size: 150%;
+}
+.title-card {
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+}
+.teacher-info {
+  width: 60%;
+  margin-right: 20px;
+}
+.progress-bar {
+  width: 40%;
+  margin-left: 20px;
+}
+.number-bar {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  margin-right: 10px;
+}
+.progress-bar-material {
+  height: 20px;
+  border-radius: 20px;
+}
+.progress-bar-content {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+p {
+  margin: 0;
+}
+/*Point for progress*/
+.point-progress {
+  display: flex;
+  width: 100%;
+}
+.point-progress mat-icon {
+  font-size: 50px;
+  width: 60px;
+}
+.point-description {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+}
+.point-chip {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+/*Courses*/
+.courses-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.courses-card {
+  margin: 20px 0;
+  max-width: 360px;
+  padding: 10px;
+}
+.courses-card-content {
+  display: flex;
+}
+.courses-card-icon {
+  display: flex;
+  width: 15%;
+}
+.courses-card-icon mat-icon {
+  font-size: 40px;
+}
+.courses-card-description {
+  display: flex;
+  width: 85%;
+}
+.courses-state-card-chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+

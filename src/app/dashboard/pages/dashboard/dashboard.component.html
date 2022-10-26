@@ -1,0 +1,44 @@
+<h2 class="mat-title mat-display-1">Dashboard</h2>
+<div class="columns-dashboard">
+  <div>
+    <mat-card>
+      <mat-card-title-group>
+        <mat-card-title>¡Meet all your teachers!</mat-card-title>
+        <mat-card-subtitle>You will meet all your teachers in detail in the teachers
+          section. You will see an ordered list with important information about the teachers in
+          your educational institution.
+        </mat-card-subtitle>
+        <img mat-card-xl-image src="https://s9.gifyu.com/images/asimov-teachers.gif" alt="asimov teachers"/>
+      </mat-card-title-group>
+    </mat-card>
+    <mat-card>
+      <mat-card-title-group>
+        <mat-card-title>Know your course progress</mat-card-title>
+        <mat-card-subtitle>View in detail the description of the subject you are
+          studying and complete the items of it. Here you can also view the progress of which
+          sections are complete. You can also see the skills related to the course.
+        </mat-card-subtitle>
+        <img mat-card-xl-image src="https://s9.gifyu.com/images/asimov-courses.gif" alt="asimov teachers"/>
+      </mat-card-title-group>
+    </mat-card>
+  </div>
+  <div>
+    <h1>School year progress</h1>
+    <mat-card class="shade-card">
+      <mat-card-content>
+        <div class="columns-progress">
+          <p class="mat-display-3" style="margin-bottom: 5px">{{valueProgress}}%</p>
+          <p>Days to end school year: {{dateOut}}</p>
+        </div>
+        <mat-progress-bar class="progress" mode="buffer" [value]="valueProgress"></mat-progress-bar>
+      </mat-card-content>
+    </mat-card>
+    <div *ngIf="announcements.length > 0">
+      <h1>Last Announcements</h1>
+      <mat-card class="shade-card">
+        <mat-card-title>{{announcements[0].title}}</mat-card-title>
+        <mat-card-subtitle>{{announcements[0].description}}</mat-card-subtitle>
+      </mat-card>
+    </div>
+  </div>
+</div>

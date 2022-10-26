@@ -1,0 +1,466 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Sofia",
+      "lastname": "Gomez Perez",
+      "age": "30",
+      "email": "sofia.gomez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 2,
+      "name": "Juan",
+      "lastname": "Garcia Morales",
+      "age": "25",
+      "email": "juan.garcia@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 3,
+      "name": "Manuel",
+      "lastname": "Aquino Serpa",
+      "age": "36",
+      "email": "manuel.aquino@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 852
+    },
+    {
+      "id": 4,
+      "name": "Luis",
+      "lastname": "Quispe Flores",
+      "age": "47",
+      "email": "luis.quispe@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 5,
+      "name": "Marco",
+      "lastname": "Sánchez Rodríguez",
+      "age": "27",
+      "email": "marco.sanchez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 853
+    },
+    {
+      "id": 6,
+      "name": "Jose",
+      "lastname": "Mamani Mendoza",
+      "age": "39",
+      "email": "jose.mamani@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 7,
+      "name": "Julio",
+      "lastname": "Torres Ramírez",
+      "age": "27",
+      "email": "julio.torres@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 8,
+      "name": "Yordy",
+      "lastname": "Ruiz Perez",
+      "age": "40",
+      "email": "yordy.ruiz@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 900
+    },
+    {
+      "id": 9,
+      "name": "Andre",
+      "lastname": "Gomez Perez",
+      "age": "30",
+      "email": "andre.gomez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 10,
+      "name": "Omar",
+      "lastname": "Gomez Perez",
+      "age": "19",
+      "email": "omar.gomez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 1200
+    },
+    {
+      "id": 11,
+      "name": "Ernesto",
+      "lastname": "Valenzuela Perez",
+      "age": "29",
+      "email": "ernesto.valenzuela@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 450
+    },
+    {
+      "id": 12,
+      "name": "Camila",
+      "lastname": "Valverde Perez",
+      "age": "43",
+      "email": "camila.valverde@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 13,
+      "name": "Hidalg",
+      "lastname": "Gomez Perez",
+      "age": "34",
+      "email": "hidalg.gomez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 14,
+      "name": "Pauloo",
+      "lastname": "Gomez Perez",
+      "age": "24",
+      "email": "pauloo.gomez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 300
+    },
+    {
+      "id": 15,
+      "name": "Irvinn",
+      "lastname": "Sotomayor Perez",
+      "age": "34",
+      "email": "irvinn.sotomayor@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 650
+    },
+    {
+      "id": 16,
+      "name": "Ramoss",
+      "lastname": "Paredes Perez",
+      "age": "21",
+      "email": "ramoss.paredes@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 850
+    },
+    {
+      "id": 17,
+      "name": "Timmyy",
+      "lastname": "Gomez Perez",
+      "age": "22",
+      "email": "timmyy.gomez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 400
+    },
+    {
+      "id": 18,
+      "name": "Ernest",
+      "lastname": "Gomez Perez",
+      "age": "34",
+      "email": "ernest.gomez@gmail.com",
+      "phone": "987654321",
+      "idDirector": 1,
+      "points": 320
+    }
+  ],
+  "announcements": [
+    {
+      "id": 1,
+      "title": "Important notice of the classes",
+      "description": "The classes are held in virtual method due to the present pandemic, Greetings, I hope you are well",
+      "directorId": 1
+    },
+    {
+      "id": 2,
+      "title": "Weekly meeting",
+      "description": "We meet to talk about different topics, among them we want to know what is the performance of the virtual classes",
+      "directorId": 1
+    },
+    {
+      "id": 3,
+      "title": "Communicate for parents",
+      "description": "Communicate to the parents of the students that the classes for tomorrow will take place in person",
+      "directorId": 1
+    },
+    {
+      "id": 4,
+      "title": "Change of holidays",
+      "description": "There will be no holidays for next month.",
+      "directorId": 1
+    },
+    {
+      "id": 5,
+      "title": "Announcement for teachers",
+      "description": "We meet to talk about for important course for students",
+      "directorId": 1
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "Algebra",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet.",
+      "state": false
+    },
+    {
+      "id": 2,
+      "name": "Geometry",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 3,
+      "name": "Arithmetic",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 4,
+      "name": "Literature",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 5,
+      "name": "History",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 6,
+      "name": "Grammar",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 7,
+      "name": "Economy",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 8,
+      "name": "Psychology",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 9,
+      "name": "Trigonometry",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    },
+    {
+      "id": 10,
+      "name": "Chemistry",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. ",
+      "state": false
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Video",
+      "description": "https://www.youtube.com/embed/LwCRRUa8yTU",
+      "state": true,
+      "idCourse": 1
+    },
+    {
+      "id": 2,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": true,
+      "idCourse": 1
+    },
+    {
+      "id": 3,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 2
+    },
+    {
+      "id": 4,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 3
+    },
+    {
+      "id": 5,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 4
+    },
+    {
+      "id": 6,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 5
+    },
+    {
+      "id": 7,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 6
+    },
+    {
+      "id": 8,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 7
+    },
+    {
+      "id": 9,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 8
+    },
+    {
+      "id": 10,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 9
+    },
+    {
+      "id": 11,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 10
+    },
+    {
+      "id": 12,
+      "name": "Video",
+      "description": "https://www.youtube.com/embed/HfACrKJ_Y2w",
+      "state": true,
+      "idCourse": 1
+    },
+    {
+      "id": 13,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": true,
+      "idCourse": 1
+    },
+    {
+      "id": 14,
+      "name": "Documentation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu dapibus lectus. Nunc cursus tempus interdum.\n                Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus condimentum viverra magna, consequat laoreet\n                dolor lobortis eget. Praesent venenatis, elit non gravida tincidunt, ipsum lectus dapibus metus, sit amet imperdiet ante tortor in eros.\n                Aenean hendrerit posuere neque ac bibendum. Vestibulum convallis dictum gravida. Praesent hendrerit elementum eros, id mollis lacus ornare a.",
+      "state": false,
+      "idCourse": 1
+    },
+    {
+      "id": 15,
+      "name": "Video",
+      "description": "https://www.youtube.com/embed/wCHm5SdNO5U",
+      "state": false,
+      "idCourse": 7
+    },
+    {
+      "id": 15,
+      "name": "Video",
+      "description": "https://www.youtube.com/embed/H-de6Tkxej8",
+      "state": false,
+      "idCourse": 2
+    }
+  ],
+  "competences": [
+    {
+      "id": 1,
+      "title": "Mathematical Reasoning",
+      "concept": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 2,
+      "title": "Critical thinking",
+      "concept": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 3,
+      "title": "Grammar",
+      "concept": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 4,
+      "title": "Mathematical design",
+      "concept": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 5,
+      "title": "Creativity",
+      "concept": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 6,
+      "title": "Logic",
+      "concept": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+    }
+  ],
+  "Directors": [
+    {
+      "id": 1,
+      "name": "Sofia",
+      "lastname": "Gomez Perez",
+      "age": "30",
+      "phone": "999 999 999",
+      "email": "sof-25@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Jorge",
+      "lastname": "Tineo Lopez",
+      "age": "34",
+      "phone": "999 999 999",
+      "email": "jorgito@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Armando",
+      "lastname": "Paredes Quispe",
+      "age": "25",
+      "phone": "999 999 999",
+      "email": "armand-63@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Rosa",
+      "lastname": "Araujo Paredes",
+      "age": "29",
+      "phone": "999 999 999",
+      "email": "rous95@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Julio",
+      "lastname": "Salazar Zapata",
+      "age": "21",
+      "phone": "999 999 999",
+      "email": "juliusP98@gmail.com"
+    }
+  ]
+}

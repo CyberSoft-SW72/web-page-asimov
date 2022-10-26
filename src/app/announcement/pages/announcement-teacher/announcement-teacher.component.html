@@ -1,0 +1,14 @@
+<p>
+  <mat-toolbar class="toolbar-title">
+    <span class="title">Announcements</span>
+  </mat-toolbar>
+</p>
+
+<mat-card class="announcement-complete" *ngFor="let item of announcement">
+  <mat-toolbar style="background: white">
+    <span class="title-examples"><mat-icon class="icon">people</mat-icon> {{item.title}} Example title </span>
+  </mat-toolbar>
+  <div style="display:flex; justify-content:space-between; align-items: center">
+    <span class="title-examples" style="margin-left: 20px"> Example description {{item.description}}</span>
+  </div>
+</mat-card>
