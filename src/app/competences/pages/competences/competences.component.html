@@ -1,12 +1,47 @@
 <mat-toolbar class="title-toolbar">
-  <span>Competences</span>
+  <span class="title" >Competences</span>
+
 </mat-toolbar>
+
+<form [formGroup]="addCompetencesForm">
+  <mat-card class="mat-elevation-z4 title-input">
+    <mat-card-title>New Competences</mat-card-title>
+    <mat-card-content>
+      <div class="align-form">
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" class="title-input2" type="text" autocomplete="off">
+          <mat-error *ngIf="title?.errors?.['required']">title is <strong>required</strong></mat-error>
+          <mat-error *ngIf="title?.errors?.['maxlength'] && !title?.errors?.['required']">title must have 60 characters or less</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" class="title-input2" autocomplete="off">
+          <mat-error *ngIf="description?.errors?.['required']">description is <strong>required</strong></mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <div class="button-form">
+      <button mat-button color="primary" [disabled]="!this.addCompetencesForm.valid" *ngIf="!isUpdated" (click)="createCompetences()">Add</button>
+      <button mat-button color="primary" *ngIf="isUpdated" (click)="updateCompetence()">Update</button>
+      <button mat-button color="primary" *ngIf="isUpdated" (click)="cancel()">Cancel</button>
+      <button mat-button color="primary" (click)="resetForm()">Reset</button>
+    </div>
+  </mat-card>
+</form>
+
 <div class="courses-card-container">
   <div *ngFor="let item of competences" class="courses-card">
     <mat-toolbar class="title-card" color="primary"> {{item.title}}</mat-toolbar>
     <mat-card>
-      <div class="courses-card-description">
+      <div class="courses-card-description" >
         <span>{{ item.description }}</span>
+        <button mat-fab color="primary" mat-mini-fab (click)="getCompetenceEdited(item)" [disabled]="isUpdated">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-fab color="primary" mat-mini-fab (click)="deleteCompetences(item.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
       </div>
     </mat-card>
   </div>

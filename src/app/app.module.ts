@@ -32,6 +32,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatRadioModule} from "@angular/material/radio";
 import { SignInComponent } from './sign-in/pages/sign-in/sign-in.component';
 import { MainComponent } from './main/pages/main/main.component';
+import { DialogCompetencesComponent } from './competences/pages/dialog-competences/dialog-competences.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { MainComponent } from './main/pages/main/main.component';
     ProfileComponent,
     SignUpComponent,
     SignInComponent,
-    MainComponent
+    MainComponent,
+    DialogCompetencesComponent
   ],
   imports: [
     BrowserModule,

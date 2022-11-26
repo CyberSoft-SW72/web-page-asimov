@@ -6,7 +6,8 @@ import { catchError, retry, throwError } from "rxjs";
   providedIn: 'root'
 })
 export class SignUpService {
-  basePath = 'https://app-asimov-api-220614235642.azurewebsites.net/api/v1';
+  basePath = 'https://asimov-api-production.up.railway.app/api/v1';
+  //basePath = 'http://localhost:8080/api/v1'
 
   httpOptions = {
     headers: new HttpHeaders({

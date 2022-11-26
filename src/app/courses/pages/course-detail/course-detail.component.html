@@ -23,6 +23,33 @@
 
     <div class="items">
       <h1 class="title">Course Items</h1>
+      <form [formGroup]="addItemsForm">
+        <mat-card class="mat-elevation-z4 title-input">
+          <mat-card-title>New Item</mat-card-title>
+          <mat-card-content>
+            <div class="align-form">
+              <mat-form-field appearance="fill">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" class="title-input2" type="text" autocomplete="off">
+                <mat-error *ngIf="title?.errors?.['required']">title is <strong>required</strong></mat-error>
+                <mat-error *ngIf="title?.errors?.['maxlength'] && !title?.errors?.['required']">title must have 60 characters or less</mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="description" class="title-input2" autocomplete="off">
+                <mat-error *ngIf="description?.errors?.['required']">description is <strong>required</strong></mat-error>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+          <div class="button-form">
+            <button mat-button color="primary" [disabled]="!this.addItemsForm.valid" *ngIf="!isUpdated" (click)="createItems()">Add</button>
+            <button mat-button color="primary" *ngIf="isUpdated" (click)="updateItems()">Update</button>
+            <button mat-button color="primary" *ngIf="isUpdated" (click)="cancel()">Cancel</button>
+            <button mat-button color="primary" (click)="resetForm()">Reset</button>
+          </div>
+        </mat-card>
+      </form>
+
       <div class="card item-card" *ngFor="let item of items;">
           <span>Tag</span>
           <div class="item-card__content">
@@ -36,6 +63,12 @@
             </div>
             <div class="item-card__right" mat-dialog-content>
               <div>
+                <button mat-fab color="primary" mat-mini-fab (click)="getItemsEdited(item)" [disabled]="isUpdated">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-fab color="primary" mat-mini-fab (click)="deleteItems(item.id)">
+                  <mat-icon>delete</mat-icon>
+                </button>
                 <button mat-button (click)="openDialog(item)">Details</button>
               </div>
             </div>

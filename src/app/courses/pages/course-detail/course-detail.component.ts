@@ -5,6 +5,7 @@ import { ActivatedRoute } from "@angular/router";
 import { CompetencesService } from "../../services/competences.service";
 import { CoursesService } from "../../services/courses.service";
 import { ItemsService } from "../../services/items.service";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 export interface ItemData {
   id: number;
@@ -26,10 +27,18 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
   competences: Array<any> = [];
   course: any = {};
   percent: number = 0.0;
-
+  isUpdated: boolean = false;
+  addEdited: any;
+  addItemsForm: FormGroup = this.formBuilder.group({
+    title: ['', {validators: [Validators.required, Validators.maxLength(60)], updateOn: 'change'}],
+    description: ['', {validators: [Validators.required], updateOn: 'change'}]
+  })
   constructor(private coursesService: CoursesService, private itemsService: ItemsService,
               private route: ActivatedRoute, private competencesService: CompetencesService,
-              public dialog: MatDialog) { }
+              public dialog: MatDialog, private formBuilder: FormBuilder) { }
+
+  get title() { return this.addItemsForm.get('title');}
+  get description() {return this.addItemsForm.get('description');}
 
   ngOnInit(): void {
     this.getAllCompetences();
@@ -90,6 +99,59 @@ export class CourseDetailComponent implements OnInit, AfterViewInit {
         this.updatePercent();
       }
     });
+  }
+
+  resetForm() {
+    this.addItemsForm.reset({title: '', description: ''});
+    this.title?.setErrors(null);
+    this.description?.setErrors(null);
+  }
+
+  createItems() {
+    const add = {
+      name: this.addItemsForm.value.title,
+      description: this.addItemsForm.value.description,
+    }
+    let courseId;
+    this.route.paramMap.subscribe(params => {
+      courseId = params.get('id');
+    })
+    this.itemsService.create(add, courseId).subscribe( (response) => {
+      // console.log('announcement added');
+      this.resetForm();
+      this.getAllItems();
+    })
+  }
+
+  deleteItems(id: any) {
+    this.itemsService.delete(id).subscribe((response) => {
+      // console.log('announcement deleted');
+      this.getAllItems();
+    })
+  }
+
+  getItemsEdited(add: any){
+    this.isUpdated = !this.isUpdated;
+    this.addEdited = add;
+    this.title?.setValue(this.addEdited.title);
+    this.description?.setValue(this.addEdited.description)
+  }
+
+  cancel() {
+    this.isUpdated = !this.isUpdated;
+    this.resetForm();
+    this.addEdited = {}
+  }
+  updateItems() {
+    const add = {
+      name: this.addItemsForm.value.title,
+      description: this.addItemsForm.value.description,
+    }
+    this.itemsService.update(this.addEdited.id, add).subscribe( (response) => {
+      console.log('announcement updated');
+      this.getAllItems();
+      this.cancel()
+    })
   }
 }
 

@@ -1,4 +1,32 @@
 <h2 class="mat-display-1">Courses <mat-icon>bookmark</mat-icon></h2>
+
+<form [formGroup]="addCoursesForm">
+  <mat-card class="mat-elevation-z4 title-input">
+    <mat-card-title>New Courses</mat-card-title>
+    <mat-card-content>
+      <div class="align-form">
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" class="title-input2" type="text" autocomplete="off">
+          <mat-error *ngIf="title?.errors?.['required']">title is <strong>required</strong></mat-error>
+          <mat-error *ngIf="title?.errors?.['maxlength'] && !title?.errors?.['required']">title must have 60 characters or less</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" class="title-input2" autocomplete="off">
+          <mat-error *ngIf="description?.errors?.['required']">description is <strong>required</strong></mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <div class="button-form">
+      <button mat-button color="primary" [disabled]="!this.addCoursesForm.valid" *ngIf="!isUpdated" (click)="createCourse()">Add</button>
+      <button mat-button color="primary" *ngIf="isUpdated" (click)="updateCourse()">Update</button>
+      <button mat-button color="primary" *ngIf="isUpdated" (click)="cancel()">Cancel</button>
+      <button mat-button color="primary" (click)="resetForm()">Reset</button>
+    </div>
+  </mat-card>
+</form>
+
 <div class="course-content">
   <div *ngFor="let course of courses">
     <mat-card class="course-card">
@@ -8,6 +36,12 @@
       </mat-card-header>
       <mat-card-content mat-card-content class="card-content">
         <p>{{course.description}}</p>
+        <button mat-fab color="primary" mat-mini-fab (click)="getCourseEdited(course)" [disabled]="isUpdated">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-fab color="primary" mat-mini-fab (click)="deleteCourse(course.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
       </mat-card-content>
       <mat-card-actions class="card-actions">
         <button mat-button content="center" color="primary" routerLink="/main/courses/{{course.id}}">see more</button>

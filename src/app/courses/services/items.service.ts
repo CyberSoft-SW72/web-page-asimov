@@ -7,7 +7,8 @@ import { catchError, retry, throwError } from "rxjs";
 })
 export class ItemsService {
 
-  basePath = 'https://app-asimov-api-220614235642.azurewebsites.net/api/v1';
+  basePath = 'https://asimov-api-production.up.railway.app/api/v1';
+  //basePath = 'http://localhost:8080/api/v1'
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -31,6 +32,28 @@ export class ItemsService {
 
   getAllByCourseId(courseId: any) {
     return this.http.get(`${this.basePath}/courses/${courseId}/items`, this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
+  create(item: any, courseId: any) {
+    return this.http.post(`${this.basePath}/courses/${courseId}/items`, item, this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
+  delete(id: any) {
+    return this.http.delete(`${this.basePath}/items/${id}`, this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
+
+  update(id: any, item: any) {
+    return this.http.put(`${this.basePath}/items/${id}`, item, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)

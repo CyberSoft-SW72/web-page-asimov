@@ -38,3 +38,19 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.title-input{
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: white;
+}
+
+.title-input2{
+  margin: 3px;
+  width: 100%;
+  border-radius: 5px;
+}
+.align-form {
+  display: flex;
+  flex-direction: column;
+}
+
